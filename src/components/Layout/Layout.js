@@ -13,13 +13,7 @@ const Layout = ({ children, title = "NURI" }) => {
       </Head>
       <header className={styles.header}>
         <Link href="/">
-          <Img
-            style={{ top: 0 }}
-            src={Logo}
-            alt="nuri-logo"
-            width={175}
-            height={130}
-          />
+          <Img src={Logo} alt="nuri-logo" width={175} height={130} />
         </Link>
       </header>
       <main className={styles.main}>{children}</main>
