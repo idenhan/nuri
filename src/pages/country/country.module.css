@@ -1,0 +1,106 @@
+.overviewPanel {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color-light);
+  text-align: center;
+}
+
+.overviewPanel img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.overviewName {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.overviewRegion {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.overviewNumbers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: center;
+}
+
+.overviewLabel {
+  font-size: 14px;
+  color: var(--text-color-secondary);
+}
+
+.detailsPanel {
+  background-color: var(--background-color-light);
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+}
+
+.detailsHeading {
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detailsLabel {
+  color: var(--text-color-secondary);
+}
+
+.detailsBorders {
+  padding: 20px;
+}
+
+.detailsBorders img {
+  width: 100%;
+}
+
+.detailsBordersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 24px;
+}
+
+.detailsBordersLabel {
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.detailBordersCountry {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+
+  .containerLeft {
+    grid-column: 1 / span 4;
+  }
+  .containerRight {
+    grid-column: 5 / span 8;
+  }
+}
