@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Brightness6Rounded } from "@material-ui/icons";
 
 import styles from "./Layout.module.css";
-import Logo from "../../images/logo.png";
 
 const Layout = ({ children, title = "NURI" }) => {
   const [theme, setTheme] = useState("light");
@@ -40,9 +40,9 @@ const Layout = ({ children, title = "NURI" }) => {
       </Head>
       <header className={styles.header}>
         <Link href="/">
-          <img
+          <Image
             className={styles.logo}
-            src={Logo}
+            src="/logo.png"
             alt="nuri-logo"
             width={175}
             height={130}
