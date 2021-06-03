@@ -16,6 +16,10 @@
   margin-bottom: 32px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 32px;
   text-align: center;
@@ -29,8 +33,5 @@
   color: var(--text-color-secondary);
   margin-left: 4px;
   cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 4px;
 }

@@ -41,7 +41,13 @@ const Layout = ({ children, title = "NURI" }) => {
       </Head>
       <header className={styles.header}>
         <Link href="/">
-          <Img src={Logo} alt="nuri-logo" width={175} height={130} />
+          <Img
+            className={styles.logo}
+            src={Logo}
+            alt="nuri-logo"
+            width={175}
+            height={130}
+          />
         </Link>
         <button className={styles.themeSwitcher} onClick={switchTheme}>
           <Brightness6Rounded />
