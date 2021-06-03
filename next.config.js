@@ -2,7 +2,7 @@ const withImages = require("next-images");
 
 module.exports = withImages();
 
-modeul.exports = {
+module.exports = {
   future: {
     webpack: true,
   },
