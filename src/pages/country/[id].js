@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import styles from "./Country.module.css";
 
-const getCountry = async (id) => {
+const getCountry = async id => {
   const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
 
   const country = await res.json();
@@ -15,7 +15,7 @@ const Country = ({ country }) => {
 
   const getBorders = async () => {
     const borders = await Promise.all(
-      country.borders.map((border) => getCountry(border))
+      country.borders.map(border => getCountry(border))
     );
 
     setBorders(borders);
@@ -119,7 +119,7 @@ export const getStaticPaths = async () => {
   const res = await fetch("https://restcountries.eu/rest/v2/all");
   const countries = await res.json();
 
-  const paths = countries.map((country) => ({
+  const paths = countries.map(country => ({
     params: { id: country.alpha3Code },
   }));
 

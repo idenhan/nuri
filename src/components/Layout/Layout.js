@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Brightness6Rounded } from "@material-ui/icons";
 import styles from "./Layout.module.css";
@@ -24,7 +25,7 @@ const Layout = ({ children, title = "World Ranks" }) => {
     }
   };
 
-  const saveTheme = (theme) => {
+  const saveTheme = theme => {
     setTheme(theme);
     localStorage.setItem("theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
@@ -39,7 +40,14 @@ const Layout = ({ children, title = "World Ranks" }) => {
 
       <header className={styles.header}>
         <Link href="/">
-          <svg
+          <Image
+            className={styles.logo}
+            src="/logo.png"
+            alt="nuri-logo"
+            width={175}
+            height={130}
+          />
+          {/* <svg
             width="175"
             height="24"
             viewBox="0 0 175 24"
@@ -63,7 +71,7 @@ const Layout = ({ children, title = "World Ranks" }) => {
               fill="#21B6B7"
             />
             <rect y="4" width="7.33333" height="4.4" rx="2" fill="#21B6B7" />
-          </svg>
+          </svg> */}
         </Link>
 
         <button className={styles.themeSwitcher} onClick={switchTheme}>
@@ -72,8 +80,9 @@ const Layout = ({ children, title = "World Ranks" }) => {
       </header>
 
       <main className={styles.main}>{children}</main>
-
-      <footer className={styles.footer}>Thu Nghiem @ devchallenges.io</footer>
+      <a href="https://idenhan.com">
+        <footer className={styles.footer}>Iden Han @ idenhan.com</footer>
+      </a>
     </div>
   );
 };

@@ -16,10 +16,21 @@
   margin-bottom: 32px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 32px;
   text-align: center;
   font-size: 0.75rem;
+  
+  transition: font-size 200ms ease-in-out;
+}
+
+.footer:hover {
+  color: var(--primary-color);
+  font-size: 0.8rem;
 }
 
 .themeSwitcher {
