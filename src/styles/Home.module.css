@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   .counts {
     flex: 1;
   }
@@ -21,4 +21,3 @@
     flex: 2;
   }
 }
-  
