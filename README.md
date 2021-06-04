@@ -1,6 +1,6 @@
-# NURI 🌎👋🏽
+# NURI 🌎💚👋🏻
 
-Get data of countries in the world and Classify countries by name, popluation, territory, and gini. You can check a country in details by simply clicking it. This also supports **dark/light mode**.
+Get data of countries in the world then Classify countries by name, popluation, territory, and gini. You can search a country by its name and countries by their regions or subregions(like Europe or Southern asia) as well. Plus, Try to click one of the lists to check the country in details by simply clicking it. This also supports **dark/light** mode.
 \
 \
 ▶ Check out the [Web Application](https://nuri.vercel.app)
