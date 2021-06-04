@@ -1,23 +1,22 @@
-.overviewPanel {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: var(--box-shadow);
-  background-color: var(--background-color-light);
-  text-align: center;
-}
-
-.overviewPanel img {
+.overview_panel img {
   width: 100%;
   border-radius: 4px;
 }
 
-.overviewName {
+.overview_panel {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color-light);
+}
+
+.overview_name {
   text-align: center;
   font-size: 32px;
   margin-bottom: 0;
 }
 
-.overviewRegion {
+.overview_region {
   text-align: center;
   font-size: 14px;
   font-weight: 300;
@@ -25,31 +24,32 @@
   margin-bottom: 24px;
 }
 
-.overviewNumbers{
+.overview_numbers {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   text-align: center;
 }
 
-.overviewLabel {
+.overview_label {
   font-size: 14px;
   color: var(--text-color-secondary);
 }
 
-.detailsPanel {
+.details_panel {
   background-color: var(--background-color-light);
   box-shadow: var(--box-shadow);
   border-radius: 8px;
 }
 
-.detailsHeading {
+.details_panel_heading {
   padding: 20px;
   padding-bottom: 0;
+
   margin: 0;
 }
 
-.detailsRow {
+.details_panel_row {
   display: flex;
   justify-content: space-between;
 
@@ -57,31 +57,32 @@
   border-bottom: 1px solid #e0e0e0;
 }
 
-.detailsLabel {
+.details_panel_label {
   color: var(--text-color-secondary);
 }
 
-.detailsBorders {
+.details_panel_borders {
   padding: 20px;
 }
 
-.detailsBorders img {
-  width: 100%;
-}
-
-.detailsBordersContainer {
+.details_panel_borders_container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 24px;
 }
 
-.detailsBordersLabel {
-  color: var(--text-color-secondary);
-  margin-bottom: 20px;
+.details_panel_borders img {
+  width: 100%;
+  border-radius: 4px;
 }
 
-.detailBordersCountry {
+.details_panel_borders_country {
   text-align: center;
+}
+
+.details_panel_borders_label {
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
 }
 
 .container {
@@ -97,10 +98,11 @@
     gap: 24px;
   }
 
-  .containerLeft {
+  .container_left {
     grid-column: 1 / span 4;
   }
-  .containerRight {
+
+  .container_right {
     grid-column: 5 / span 8;
   }
 }

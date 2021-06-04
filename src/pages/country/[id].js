@@ -25,67 +25,83 @@ const Country = ({ country }) => {
     getBorders();
   }, []);
 
+  console.log(borders);
+
   return (
     <Layout title={country.name}>
       <div className={styles.container}>
-        <div className={styles.containerLeft}>
-          <div className={styles.overviewPanel}>
-            <img src={country.flag} alt={country.name} />
-            <h1 className={styles.overviewName}>{country.name}</h1>
-            <div className={styles.overviewRegion}>{country.region}</div>
-            <div className={styles.overviewNumbers}>
-              <div className={styles.overviewPopulation}>
-                <div className={styles.overviewValue}>{country.population}</div>
-                <div className={styles.overviewLabel}>Population</div>
+        <div className={styles.container_left}>
+          <div className={styles.overview_panel}>
+            <img src={country.flag} alt={country.name}></img>
+
+            <h1 className={styles.overview_name}>{country.name}</h1>
+            <div className={styles.overview_region}>{country.region}</div>
+
+            <div className={styles.overview_numbers}>
+              <div className={styles.overview_population}>
+                <div className={styles.overview_value}>
+                  {country.population}
+                </div>
+                <div className={styles.overview_label}>Population</div>
               </div>
-              <div className={styles.overviewArea}>
-                <div className={styles.overviewValue}>{country.area}</div>
-                <div className={styles.overviewLabel}>area</div>
+
+              <div className={styles.overview_area}>
+                <div className={styles.overview_value}>{country.area}</div>
+                <div className={styles.overview_label}>Area</div>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.containerRight}>
-          <div className={styles.detailsPanel}>
-            <h4 className={styles.detailsHeading}>Details</h4>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>Capital</div>
-              <div className={styles.detailsValue}>{country.capital}</div>
+        <div className={styles.container_right}>
+          <div className={styles.details_panel}>
+            <h4 className={styles.details_panel_heading}>Details</h4>
+
+            <div className={styles.details_panel_row}>
+              <div className={styles.details_panel_label}>Capital</div>
+              <div className={styles.details_panel_value}>
+                {country.capital}
+              </div>
             </div>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>SubRegion</div>
-              <div className={styles.detailsValue}>{country.subregion}</div>
-            </div>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>Languages</div>
-              <div className={styles.detailsValue}>
+
+            <div className={styles.details_panel_row}>
+              <div className={styles.details_panel_label}>Languages</div>
+              <div className={styles.details_panel_value}>
                 {country.languages.map(({ name }) => name).join(", ")}
               </div>
             </div>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>Currencies</div>
-              <div className={styles.detailsValue}>
+
+            <div className={styles.details_panel_row}>
+              <div className={styles.details_panel_label}>Currencies</div>
+              <div className={styles.details_panel_value}>
                 {country.currencies.map(({ name }) => name).join(", ")}
               </div>
             </div>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>Native Language</div>
-              <div className={styles.detailsValue}>{country.nativeName}</div>
+
+            <div className={styles.details_panel_row}>
+              <div className={styles.details_panel_label}>Native name</div>
+              <div className={styles.details_panel_value}>
+                {country.nativeName}
+              </div>
             </div>
-            <div className={styles.detailsRow}>
-              <div className={styles.detailsLabel}>Gini</div>
-              <div className={styles.detailsValue}>{country.gini} %</div>
+
+            <div className={styles.details_panel_row}>
+              <div className={styles.details_panel_label}>Gini</div>
+              <div className={styles.details_panel_value}>{country.gini} %</div>
             </div>
-            <div className={styles.detailsBorders}>
-              <div className={styles.detailsBordersLabel}>
+
+            <div className={styles.details_panel_borders}>
+              <div className={styles.details_panel_borders_label}>
                 Neighbouring Countries
               </div>
-              <div className={styles.detailsBordersContainer}>
+
+              <div className={styles.details_panel_borders_container}>
                 {borders.map(({ flag, name }) => (
-                  <div className={styles.detailsBordersCountry}>
+                  <div className={styles.details_panel_borders_country}>
                     <img src={flag} alt={name}></img>
 
-                    <div className={styles.detailsBordersName}>{name}</div>
+                    <div className={styles.details_panel_borders_name}>
+                      {name}
+                    </div>
                   </div>
                 ))}
               </div>
