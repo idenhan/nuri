@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Brightness6Rounded } from "@material-ui/icons";
 import styles from "./Layout.module.css";
 
-const Layout = ({ children, title = "World Ranks" }) => {
+const Layout = ({ children, title = "NURI" }) => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Layout = ({ children, title = "World Ranks" }) => {
     <div className={styles.container}>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <header className={styles.header}>
