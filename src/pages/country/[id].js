@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Layout from "../../components/Layout/Layout";
 import styles from "./Country.module.css";
 
@@ -22,6 +24,7 @@ const Country = ({ country }) => {
   };
 
   useEffect(() => {
+    AOS.init({ duration: 1000, easing: "ease" });
     getBorders();
   }, []);
 
@@ -30,7 +33,7 @@ const Country = ({ country }) => {
   return (
     <Layout title={country.name}>
       <div className={styles.container}>
-        <div className={styles.container_left}>
+        <div data-aos="fade-right" className={styles.container_left}>
           <div className={styles.overview_panel}>
             <img src={country.flag} alt={country.name}></img>
 
@@ -52,7 +55,7 @@ const Country = ({ country }) => {
             </div>
           </div>
         </div>
-        <div className={styles.container_right}>
+        <div data-aos="fade-left" className={styles.container_right}>
           <div className={styles.details_panel}>
             <h4 className={styles.details_panel_heading}>Details</h4>
 
@@ -96,7 +99,10 @@ const Country = ({ country }) => {
 
               <div className={styles.details_panel_borders_container}>
                 {borders.map(({ flag, name }) => (
-                  <div className={styles.details_panel_borders_country}>
+                  <div
+                    data-aos="fade-down"
+                    className={styles.details_panel_borders_country}
+                  >
                     <img src={flag} alt={name}></img>
 
                     <div className={styles.details_panel_borders_name}>
