@@ -1,12 +1,19 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
 } from "@material-ui/icons";
-import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import styles from "./CountriesTable.module.css";
 
 const orderBy = (countries, value, direction) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, easing: "ease" });
+  }, []);
+
   if (direction === "asc") {
     return [...countries].sort((a, b) => (a[value] > b[value] ? 1 : -1));
   }
@@ -60,7 +67,7 @@ const CountriesTable = ({ countries }) => {
   };
 
   return (
-    <div>
+    <div data-aos="fade-down">
       <div className={styles.heading}>
         <div className={styles.heading_flag}></div>
 

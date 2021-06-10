@@ -1,5 +1,7 @@
-import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import CountriesTable from "../components/CountriesTable/CountriesTable";
 import Layout from "../components/Layout/Layout";
 import SearchInput from "../components/SearchInput/SearchInput";
@@ -21,12 +23,17 @@ export default function Home({ countries }) {
     setKeyword(e.target.value.toLowerCase());
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, easing: "ease" });
+  }, []);
+
   return (
     <Layout>
       <div className={styles.inputContainer}>
-        <div className={styles.counts}>Found {countries.length} countries</div>
-
-        <div className={styles.input}>
+        <div data-aos="fade-right" className={styles.counts}>
+          Found {countries.length} countries
+        </div>
+        <div data-aos="fade-left" className={styles.input}>
           <SearchInput
             placeholder="Filter by Name, Region or SubRegion"
             onChange={onInputChange}
